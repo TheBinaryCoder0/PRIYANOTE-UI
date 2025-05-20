@@ -1,0 +1,410 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+#main{
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(90deg, #4e4376, #48afa7, #6441a5, #427c98, #a02e93, #51809f, #6441a5, #2f8cbb);
+    background-size: 400% 400%;
+    animation: gradientShift 10s ease-in-out infinite;
+
+    /* background: linear-gradient(90deg, #605cb8, #ab2970df); */
+    color: rgb(235, 230, 230);
+    font-family: 'Brush Script MT', cursive;
+}
+
+#navbar{
+    padding: 1rem 2rem; 
+    width: 100%;
+    height: 8%;
+    background: linear-gradient(90deg, #4e4376, #48afa7, #6441a5, #427c98, #a02e93, #51809f, #6441a5, #2f8cbb);
+    /* background:black; */
+    /* border-bottom: 1px solid white; */
+
+
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.logo{
+    width: 13%;
+    height: 100%;
+    /* background-color: rebeccapurple; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    outline: none;
+    
+}
+
+.logo a:hover{
+    cursor: pointer;
+}
+
+
+.links{
+    /* background-color: orange; */
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links a{
+    text-decoration: none;
+    color: white;
+    font-size: 0.9rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.links a:hover{
+    border-bottom: #ffffff solid 1px;
+    font-size: 1rem;
+    transform: scale(1.05);
+}
+
+#hero{
+    width: 100%;
+    height: 87%;
+    padding: 1rem 3rem;
+    /* background-color: rgb(99, 57, 98); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.mood-and-date{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.editor-edit-btn{
+    border: none;
+    background: linear-gradient(90deg, #4e4376, #48afa7, #6441a5, #427c98, #a02e93, #51809f, #6441a5, #2f8cbb);
+    color: white;
+    font-size: 1.2rem;
+    width: 5%;
+    height: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+.editor-edit-btn:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    font-size: 1.3rem;
+}
+
+.editor-edit-btn:active{
+    transform: scale(0.95);
+    font-size: 1.2rem;
+}
+
+.current-track{
+    border: 1px solid white;
+    border-radius: 20px;
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    /* background-color: rebeccapurple; */
+}
+
+.title-and-description{
+    width: 100%;
+    height: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    /* background-color: rebeccapurple; */
+}
+
+.title-and-description input{
+    width: 60%;
+    height: 20%;
+    padding: 1rem;
+    border: 1px solid white;
+    border-radius: 20px;
+    outline: none;
+    /* background-color: transparent; */
+    background: linear-gradient(90deg, #4e4376, #48afa7, #6441a5, #427c98, #a02e93, #51809f, #6441a5, #2f8cbb);
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'Brush Script MT', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.title-and-description input::placeholder{
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'Brush Script MT', cursive;
+}
+
+.title-and-description textarea{
+    width: 100%;
+    height: 80%;
+    padding: 1rem;
+    border: 1px solid white;
+    border-radius: 20px;
+    outline: none;
+    resize: none;
+    /* background-color: transparent; */
+    background: linear-gradient(90deg, #4e4376, #48afa7, #6441a5, #427c98, #a02e93, #51809f, #6441a5, #2f8cbb);
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'Brush Script MT', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.title-and-description textarea::placeholder{
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'Brush Script MT', cursive;
+}
+
+.functions{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid white; */
+    border-radius: 20px;
+}
+
+.tags{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    /* background-color: yellowgreen; */
+    border-radius: 20px;
+    padding: 0.5rem 0rem;
+}
+
+.current-tags{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid white;
+    /* background-color: rgb(71, 79, 55); */
+    /* background: linear-gradient(90deg, #4e4376, #48afa7, #6441a5, #427c98, #a02e93, #51809f, #6441a5, #2f8cbb); */
+    border-radius: 20px;
+    padding: 1rem 1rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    background-color: transparent;
+}
+
+.tag{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 30%;
+    min-height: 80%;
+    /* background-color: transparent; */
+    background: linear-gradient(90deg, #4e4376, #48afa7, #6441a5, #427c98, #a02e93, #51809f, #6441a5, #2f8cbb);
+    border: 1px solid white;
+    border-radius: 20px;
+    font-size: 1.5rem;
+}
+
+
+.new-tags{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+    /* background-color: rgb(71, 79, 55); */
+    border-radius: 20px;
+    padding: 0.5rem 0.5rem;
+}
+
+.new-tags h2{
+    font-size: 1.5rem;
+    color: white;
+    font-family: 'Brush Script MT', cursive;
+    text-align: center;
+}
+
+.add-new-tags{
+    width: 75%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.3rem;
+    background: linear-gradient(90deg, #4e4376, #48afa7, #6441a5, #427c98, #a02e93, #51809f, #6441a5, #2f8cbb);
+    border-radius: 50%;
+    border: 1px solid white;
+    color: white;
+    font-size: 2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.add-new-tags:hover{
+    background: linear-gradient(0deg, #4e4376, #48afa7, #6441a5, #427c98, #a02e93, #51809f, #6441a5, #2f8cbb);
+    cursor: pointer;
+    transform: scale(1.1);
+    font-size: 2.5rem;
+}
+
+.add-new-tags:active{
+    background: linear-gradient(90deg, #4e4376, #48afa7, #6441a5, #427c98, #a02e93, #51809f, #6441a5, #2f8cbb);
+    transform: scale(0.95);
+    font-size: 2rem;
+}
+
+.options{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    /* background-color: yellowgreen; */
+    /* border: 1px solid white; */
+    border-radius: 20px;
+    padding: 1rem 1rem;
+}
+
+.save-btn{
+    width: 30%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background: linear-gradient(90deg, #4e4376, #48afa7, #6441a5, #427c98, #a02e93, #51809f, #6441a5, #2f8cbb);
+    border-radius: 20px;
+    border: 1px solid white;
+    color: white;
+    font-size: 1.2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.save-btn:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    font-size: 1.5rem;
+}
+.save-btn:active{
+    transform: scale(0.95);
+    font-size: 1.2rem;
+}
+
+
+.share-btn{
+    width: 30%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background: linear-gradient(90deg, #4e4376, #48afa7, #6441a5, #427c98, #a02e93, #51809f, #6441a5, #2f8cbb);
+    border-radius: 20px;
+    border: 1px solid white;
+    color: white;
+    font-size: 1.2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.share-btn:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    font-size: 1.5rem;
+}
+.share-btn:active{
+    transform: scale(0.95);
+    font-size: 1.2rem;
+}
+
+.export-btn{
+    width: 30%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background: linear-gradient(90deg, #4e4376, #48afa7, #6441a5, #427c98, #a02e93, #51809f, #6441a5, #2f8cbb);
+    border-radius: 20px;
+    border: 1px solid white;
+    color: white;
+    font-size: 1.2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.export-btn:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    font-size: 1.5rem;
+}
+.export-btn:active{
+    transform: scale(0.95);
+    font-size: 1.2rem;
+}
+
+#footer{
+    width: 100%;
+    height: 5%;
+
+    /* background: black; */
+
+    background: linear-gradient(90deg, #4e4376, #48afa7, #6441a5, #427c98, #a02e93, #51809f, #6441a5, #2f8cbb); 
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
